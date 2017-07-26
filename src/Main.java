@@ -5,6 +5,8 @@ public class Main {
         System.out.println("Hello World!");
         //Main.Palindrome(new String("malalam"));
         System.out.println(Main.removeChar('j', myName));
+        System.out.println(RecursionTypes.fibonocci(5));
+        System.out.println(FindOdd.oddManOut(new int[]{ 2, 3, 4, 3, 1, 4, 5, 1, 4, 2, 5}) );
     }
 
     public static void Palindrome(String x) {
