@@ -1,12 +1,21 @@
+import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
         String myName = new String("jaswanth");
         System.out.println("Hello World!");
-        //Main.Palindrome(new String("malalam"));
+        Main.Palindrome(new String("malalam"));
         System.out.println(Main.removeChar('j', myName));
         System.out.println(RecursionTypes.fibonocci(5));
         System.out.println(FindOdd.oddManOut(new int[]{ 2, 3, 4, 3, 1, 4, 5, 1, 4, 2, 5}) );
+
+        // test missing number problem
+        MissingNumber mn = new MissingNumber();
+        mn.setArr1(new int[] {9, 7, 8, 5, 4, 6, 2, 3, 1});
+        mn.setArr2(new int[] { 2, 4, 3, 9, 1, 8, 5, 6});
+
+        System.out.println(mn.findMissingNumber());
+        System.out.println(mn.findMissingNumberXor());
     }
 
     public static void Palindrome(String x) {
