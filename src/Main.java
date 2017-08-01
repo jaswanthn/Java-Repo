@@ -14,8 +14,12 @@ public class Main {
         mn.setArr1(new int[] {9, 7, 8, 5, 4, 6, 2, 3, 1});
         mn.setArr2(new int[] { 2, 4, 3, 9, 1, 8, 5, 6});
 
-        System.out.println(mn.findMissingNumber());
+
         System.out.println(mn.findMissingNumberXor());
+        int max = MaxSquare.maxSquareinMatrix(new int[][] {{1,1,0,0,1,1},{0,0,1,0,1,1},{1,1,1,1,1,0},{1,1,1,1,1,1},
+                {1,1,1,1,1,1},{0,1,1,1,1,1},{1,0,0,0,1,1}});
+        System.out.println("Max size square sub matrix: " + max);
+
     }
 
     public static void Palindrome(String x) {
