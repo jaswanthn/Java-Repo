@@ -1,2 +1,2 @@
 # SmartJavaRepo
-coding  java best practices 
+java best practices 
