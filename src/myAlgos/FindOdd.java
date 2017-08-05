@@ -1,3 +1,5 @@
+package myAlgos;
+
 import java.util.HashMap;
 
 public class FindOdd {

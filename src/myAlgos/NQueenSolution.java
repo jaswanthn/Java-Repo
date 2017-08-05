@@ -1,3 +1,5 @@
+package myAlgos;
+
 public class NQueenSolution {
 
     // to set n * n size of the board, hence n queens

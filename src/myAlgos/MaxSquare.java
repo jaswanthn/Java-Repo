@@ -1,3 +1,5 @@
+package myAlgos;
+
 public class MaxSquare {
 
     public static int maxSquareinMatrix(int[][] matrix) {

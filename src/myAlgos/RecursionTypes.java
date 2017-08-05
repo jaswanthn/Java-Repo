@@ -1,3 +1,5 @@
+package myAlgos;
+
 public class RecursionTypes {
 
     private int test = 0;

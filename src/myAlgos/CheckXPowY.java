@@ -1,3 +1,5 @@
+package myAlgos;
+
 public class CheckXPowY {
 
     public static boolean checkIfXPowY(int x) {
