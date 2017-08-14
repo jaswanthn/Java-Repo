@@ -1,6 +1,5 @@
 package myAlgos;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 public class MissingNumber {
@@ -28,6 +27,7 @@ public class MissingNumber {
     // assuming array1 doesn't contain duplicates
     public int findMissingNumber() {
         HashSet hs = new HashSet();
+
 
         for (int i=0; i < arr2.length; i++) {
             hs.add(arr2[i]);
