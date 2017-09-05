@@ -37,7 +37,6 @@ public class NQueenSolution {
             return true;
         }
 
-        // Generic case
         for (int i=0; i < N; i++) {
             if (isSafeToPlaceUtil(board, i, col)) {
                 board[i][col] = 1;

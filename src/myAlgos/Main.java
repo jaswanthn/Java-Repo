@@ -1,6 +1,10 @@
 package myAlgos;
 
+import java.util.*;
+
 public class Main {
+
+
 
     public static void main(String[] args) {
         String myName = new String("jaswanth");
@@ -9,6 +13,8 @@ public class Main {
         System.out.println(Main.removeChar('j', myName));
         System.out.println(RecursionTypes.fibonocci(5));
         System.out.println(FindOdd.oddManOut(new int[]{ 2, 3, 4, 3, 1, 4, 5, 1, 4, 2, 5}) );
+
+
 
         // test missing number problem
         MissingNumber mn = new MissingNumber();
@@ -20,7 +26,48 @@ public class Main {
         int max = MaxSquare.maxSquareinMatrix(new int[][] {{1,1,0,0,1,1},{0,0,1,0,1,1},{1,1,1,1,1,0},{1,1,1,1,1,1},
                 {1,1,1,1,1,1},{0,1,1,1,1,1},{1,0,0,0,1,1}});
         System.out.println("Max size square sub matrix: " + max);
+//
+//        Map<String, Integer> mp = new HashMap<String, Integer>();
+//
+//        mp.put("hello", 1);
+//        mp.put("hi", 2);
+//
+//       for (Map.Entry me : mp.entrySet()) {
+//
+//       }
+//
+//       for (String str: mp.keySet()) {
+//
+//       }
+//
+//       for (int x : mp.values()) {
+//
+//       }
+//
+//       Set st = mp.entrySet();
+//
+//        Iterator it = st.iterator();
+//
+//        LinkedList l = new LinkedList();
+//
 
+        System.out.println(Main.checkSum(new int[]{3, 1, 7, 11}, 12));
+
+    }
+
+    public static boolean checkSum(int[] arr, int target) {
+
+        HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+
+        for (int i = 0; i < arr.length; i++) {
+            hm.put(arr[i], target - arr[i]);
+            if (hm.containsKey(target - arr[i]) && arr[i] != target - arr[i])  {
+                System.out.println("two array elements are:  " + arr[i] + ", " + hm.get(arr[i]));
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public static void Palindrome(String x) {
