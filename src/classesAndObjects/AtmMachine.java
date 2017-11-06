@@ -4,6 +4,7 @@ public class AtmMachine {
     public static void main(String[] args) {
         Customer cs = new Customer();
         cs.withDrawMoney();
+        cs.depositMoney();
     }
 }
 

@@ -1,5 +1,8 @@
 package myAlgos;
 
+import constructors.Account;
+import oops.Student;
+
 import java.util.*;
 
 public class Main {
@@ -53,6 +56,13 @@ public class Main {
 
         System.out.println(Main.checkSum(new int[]{3, 1, 7, 11}, 12));
 
+        Account at = new Account(122);
+
+        Main.testClass(at);
+
+        System.out.println(at.accountId);
+
+
     }
 
     public static boolean checkSum(int[] arr, int target) {
@@ -82,6 +92,9 @@ public class Main {
         }
     }
 
+    public static void testClass(Account at) {
+        at.accountId = 143;
+    }
 
     private static String reverseString(String y) {
         String res = "";
