@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class FindOdd {
 
-    public static int oddManOut(int[] arr) {
+     public static int oddManOut(int[] arr) {
         HashMap<Integer, Integer> hm = new HashMap<>();
 
         for(int i=0; i<arr.length; i++) {
@@ -14,7 +14,7 @@ public class FindOdd {
             }
 
         for (int o : hm.keySet()) {
-            if(hm.get(o).equals(1)) {
+            if(hm.get(o) == 1) {
                 return o;
             }
         }

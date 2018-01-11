@@ -19,5 +19,8 @@ public class Rectangle extends Shape {
         display("Perimeter", 2 * (this.length + this.breadth));
     }
 
+    public void display(String s, double d){
+        super.display(s, d);
+    }
 
 }
