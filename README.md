@@ -1,2 +1,3 @@
-# SmartJavaRepo
-java best practices 
+# SmartJava Repo
+
+Algos, Best Practices and Coding Challenge solutions ...

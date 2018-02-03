@@ -1,8 +1,5 @@
 package myAlgos;
 
-import constructors.Account;
-import oops.Student;
-
 import java.util.*;
 
 public class Main {
@@ -10,26 +7,42 @@ public class Main {
 
 
     public static void main(String[] args) {
-//        String myName = new String("jaswanth");
-//        System.out.println("Hello World!");
-//        Main.Palindrome(new String("malalam"));
-//        System.out.println(Main.removeChar('j', myName));
-//        System.out.println(RecursionTypes.fibonocci(5));
+        String myName = new String("jaswanth");
+        System.out.println("Hello World!");
+        Main.Palindrome(new String("malalam"));
+        System.out.println(Main.removeChar('j', myName));
+        System.out.println(RecursionTypes.fibonocci(5));
         System.out.println(FindOdd.oddManOut(new int[]{ 2, 3, 4, 3, 1, 4, 5, 1, 4, 2, 5}) );
 
 
 
         // test missing number problem
-//        MissingNumber mn = new MissingNumber();
-//        mn.setArr1(new int[] {9, 7, 8, 5, 4, 6, 2, 3, 1});
-//        mn.setArr2(new int[] { 2, 4, 3, 9, 1, 8, 5, 6});
+        MissingNumber mn = new MissingNumber();
+        mn.setArr1(new int[] {9, 7, 8, 5, 4, 6, 2, 3, 1});
+        mn.setArr2(new int[] { 2, 4, 3, 9, 1, 8, 5, 6});
+
+
+        System.out.println(mn.findMissingNumberXor());
+        int max = MaxSquare.maxSquareinMatrix(new int[][] {{1,1,0,0,1,1},{0,0,1,0,1,1},{1,1,1,1,1,0},{1,1,1,1,1,1},
+                {1,1,1,1,1,1},{0,1,1,1,1,1},{1,0,0,0,1,1}});
+        System.out.println("Max size square sub matrix: " + max);
+
+        ArrayList<Integer> x = new ArrayList<>(Arrays.asList(1,2,3,4));
+        ArrayList<Integer> y = new ArrayList<>(Arrays.asList(5,6,7,8));
+        ArrayList<Integer> z = new ArrayList<>(Arrays.asList(9,10,11,12));
+
+        ArrayList<ArrayList<Integer>> A = new ArrayList<ArrayList<Integer>>();
+        A.add(x);
+        A.add(y);
+        A.add(z);
+        ArrayList<ArrayList<Integer>> B = performOps(A);
+        for (int i = 0; i < B.size(); i++) {
+            for (int j = 0; j < B.get(i).size(); j++) {
+                System.out.print(B.get(i).get(j) + " ");
+            }
+        }
 //
-//
-//        System.out.println(mn.findMissingNumberXor());
-//        int max = MaxSquare.maxSquareinMatrix(new int[][] {{1,1,0,0,1,1},{0,0,1,0,1,1},{1,1,1,1,1,0},{1,1,1,1,1,1},
-//                {1,1,1,1,1,1},{0,1,1,1,1,1},{1,0,0,0,1,1}});
-//        System.out.println("Max size square sub matrix: " + max);
-//
+
 //        Map<String, Integer> mp = new HashMap<String, Integer>();
 //
 //        mp.put("hello", 1);
@@ -56,13 +69,22 @@ public class Main {
 
         System.out.println(Main.checkSum(new int[]{3, 1, 7, 11}, 12));
 
-        Account at = new Account(122);
+    }
 
-        Main.testClass(at);
+    public static ArrayList<ArrayList<Integer>> performOps(ArrayList<ArrayList<Integer>> A) {
+        ArrayList<ArrayList<Integer>> B = new ArrayList<ArrayList<Integer>>();
+        for (int i = 0; i < A.size(); i++) {
+            B.add(new ArrayList<Integer>());
 
-        System.out.println(at.accountId);
+            for (int j = 0; j < A.get(i).size(); j++) {
+                B.get(i).add(0);
+            }
 
-
+            for (int j = 0; j < A.get(i).size(); j++) {
+                B.get(i).set(A.get(i).size() - 1 - j, A.get(i).get(j));
+            }
+        }
+        return B;
     }
 
     public static boolean checkSum(int[] arr, int target) {
@@ -92,9 +114,6 @@ public class Main {
         }
     }
 
-    public static void testClass(Account at) {
-        at.accountId = 143;
-    }
 
     private static String reverseString(String y) {
         String res = "";
