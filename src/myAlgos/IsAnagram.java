@@ -8,7 +8,7 @@ public class IsAnagram {
 
 
     public static void main(String[] args) {
-        isAnagram1("kite", "etik");
+        isAnagram("kite", "etik");
 
         ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList("abc","efg","abb"));
 
@@ -19,11 +19,11 @@ public class IsAnagram {
     }
 
 
-    public static void isAnagram1(String str1, String str2) {
+    public static boolean isAnagram1(String str1, String str2) {
 
         if (str1.length() != str2.length()) {
             System.out.println("NOt an anagram");
-            return;
+            return false;
         }
 
         // sort approach
@@ -36,20 +36,20 @@ public class IsAnagram {
 
         if (Arrays.equals(arr1, arr2)) {
             System.out.println("Is Anagram");
+            return true;
         } else {
             System.out.println("Not an Anagram");
+            return false;
         }
 
     }
 
-
-
-    public static void isAnagram(String str1, String str2) {
+    public static boolean isAnagram(String str1, String str2) {
         // sum approach
 
         if (str1.length() != str2.length()) {
             System.out.println("Not an anagram");
-            return;
+            return false;
         }
 
         int sum1 = 0;
@@ -58,13 +58,21 @@ public class IsAnagram {
         for (int i = 0; i < str1.length(); i++) {
             sum1 += str1.charAt(i);
             sum2 += str2.charAt(i);
+
         }
+
+//        Character c = '1';
+//        System.out.println(Character.getNumericValue(c));
 
         if (sum1 == sum2) {
             System.out.println("is Anagram");
+            return true;
         } else {
             System.out.println("is not Anagram");
+            return false;
         }
 
     }
+
+
 }
