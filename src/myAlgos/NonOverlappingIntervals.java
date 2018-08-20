@@ -71,17 +71,18 @@ public class NonOverlappingIntervals {
     public static void main(String[] args) {
         Interval it1 = new Interval(1, 3);
         Interval it2 = new Interval(6,9);
-        Interval it3 = new Interval(10,14);
+        Interval it3 = new Interval(17,19);
+
 
 
         ArrayList<Interval> al = new ArrayList<Interval>();
-        al.add(it1);
         al.add(it2);
+        al.add(it1);
         al.add(it3);
 
 
         NonOverlappingIntervals no = new NonOverlappingIntervals();
-        ArrayList<Interval> al1 = no.insert(al, new Interval(2,13));
+        ArrayList<Interval> al1 = no.insert(al, new Interval(7,16));
 
         for (Interval a: al1) {
             System.out.println(a.start  + " :" + a.end);
