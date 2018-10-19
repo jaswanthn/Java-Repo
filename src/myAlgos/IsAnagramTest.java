@@ -11,7 +11,7 @@ public class IsAnagramTest {
 
     @Test
     public void isAnagramTest1() {
-        Assert.assertEquals(IsAnagram.isAnagram("abc", "bca"), true);
+        Assert.assertEquals(IsAnagram.isAnagram("duh", "ill"), false);
     }
 
     @Test

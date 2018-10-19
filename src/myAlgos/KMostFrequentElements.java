@@ -5,7 +5,7 @@ import java.util.*;
 public class KMostFrequentElements {
 
     public static void main(String[] args) {
-        System.out.println(findKMostFrequentElements(new int[]{1, 6, 2, 1, 6, 1}, 5));
+        System.out.println(Arrays.toString(findKMostFrequentElements(new int[]{7, 10, 11, 5, 2, 5, 5, 7, 11, 8, 9}, 4)));
     }
 
 
@@ -26,7 +26,7 @@ public class KMostFrequentElements {
         TreeMap<Integer, ArrayList<Integer>> bucketMap = new TreeMap<>();
         for (int number : hm.keySet()) {
             if (bucketMap.containsKey(hm.get(number))) {
-                // add that key to list
+                // add that value to list
                 bucketMap.get(hm.get(number)).add(number);
             } else {
                 ArrayList<Integer> al = new ArrayList<>();
@@ -42,6 +42,8 @@ public class KMostFrequentElements {
             res.addAll(preResList);
         }
 
+        System.out.println(res);
+
 
         // return the first required entries
         int[] finalres = new int[k];
@@ -51,7 +53,7 @@ public class KMostFrequentElements {
         if (k > resSize) k = resSize;
         for (int j=0; j < k; j++) {
             finalres[j] = res.get(resSize - j - 1);
-            System.out.println(finalres[j]);
+//            System.out.println(finalres[j]);
         }
 
         return finalres;

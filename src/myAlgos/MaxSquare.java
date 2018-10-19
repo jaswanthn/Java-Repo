@@ -22,7 +22,9 @@ public class  MaxSquare {
                     // if first row or column max square would be directly based on the value
                     // since there is nothing to trace from neighbors
                     table[i][j] = matrix[i][j];
-
+                    if (matrix[i][j] == 1) {
+                        max = 1;
+                    }
                 } else if (matrix[i][j] == 0) {
                     // if the cell value has 0 then no way they can form square matrix with 1s and can be ignored
                     table[i][j] = 0;
