@@ -20,7 +20,7 @@ public class TargetElement {
             if (hs.contains((long)num)) {
                 pairs++;
             } else {
-                hs.add((k - Long.parseLong(String.valueOf(num))));
+                hs.add(k - num);
             }
         }
 

@@ -7,8 +7,8 @@ public class LongestCommonPrefix {
 
     public static void main(String[] args) {
 
-        System.out.println(lcpInArrayOfStrings(new String[]{"geeksforgeeks", "geeks", "geek"}));
-//        System.out.println(lcpInArrayOfStringsCharByChar(new String[]{"geeksforgeeks", "geeks", "geek"}));
+//        System.out.println(lcpInArrayOfStrings(new String[]{"geeksforgeeks", "geeks", "geek"}));
+        System.out.println(lcpInArrayOfStringsCharByChar(new String[]{"geeksforgeeks", "geeks", "geek"}));
 
     }
 
@@ -66,7 +66,7 @@ public class LongestCommonPrefix {
         // check the first character till mismatch in all strings match
         for (int i = 0; i < min; i++) {
             char c = strArr[minIndex].charAt(i);
-            for (int k = 1; k < strArr.length; k++) {
+            for (int k = 0; k < strArr.length; k++) {
                 if (strArr[k].charAt(i) != c)
                     return prefix;
             }

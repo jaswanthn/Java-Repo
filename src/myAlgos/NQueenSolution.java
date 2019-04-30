@@ -43,7 +43,7 @@ public class NQueenSolution {
             // each row check whether it is safe to place the queen
             if (isSafeToPlaceUtil(board, i, col)) {
                 board[i][col] = 1;
-                // progress to next level through recuresion
+                // progress to next level through recursion
                 if (solveNQUtil(board, col + 1)) {
                     return true;
                 }

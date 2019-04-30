@@ -29,7 +29,6 @@ public class Subsets {
 
             // add single items
             temp.add(new ArrayList<>(new ArrayList<>(Arrays.asList(arr[i]))));
-//            System.out.println(temp + " " + arr[i]);
 
             result.addAll(temp);
 
@@ -38,8 +37,33 @@ public class Subsets {
 
     }
 
+    // recursive solution - which uses backtracking concept
+    public List<List<Integer>> printSubsetUsingBT(int[] arr) {
+        Arrays.sort(arr);
+        List<List<Integer>> result = new ArrayList<>();
+        printSubsetsUsingBTHelper(result, new ArrayList<>(), arr, 0);
+        return result;
+    }
+
+    private void printSubsetsUsingBTHelper(List<List<Integer>> result, ArrayList tempList, int[] arr, int start) {
+
+       result.add(new ArrayList<>(tempList));
+
+       for (int i = start; i < arr.length; i++) {
+//           if (tempList.contains(arr[i]))
+           // choose
+           tempList.add(arr[i]);
+           // explore
+           printSubsetsUsingBTHelper(result, tempList, arr, i+1);
+           // unchoose
+           tempList.remove(tempList.size() - 1);
+       }
+    }
+
     public static void main(String[] args) {
         Subsets subsetObj = new Subsets();
-        System.out.println(subsetObj.printSubsets(new int[]{1,2,3}));
+//        System.out.println(subsetObj.printSubsets(new int[]{1,2,3}));
+        System.out.println(subsetObj.printSubsetUsingBT(new int[]{2,1,3}));
+
     }
 }
