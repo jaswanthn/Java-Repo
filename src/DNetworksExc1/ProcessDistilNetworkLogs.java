@@ -1,4 +1,4 @@
-package DistilNetworksExc1;
+package DNetworksExc1;
 
 import java.io.*;
 import java.util.Date;
