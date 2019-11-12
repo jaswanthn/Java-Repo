@@ -7,6 +7,9 @@ public class Main {
 
 
     public static void main(String[] args) {
+
+        System.out.println(Character.isLetter('1'));
+
         String myName = new String("jaswanth");
         System.out.println("Hello World!");
         Main.Palindrome(new String("malalam"));
@@ -41,6 +44,20 @@ public class Main {
                 System.out.print(B.get(i).get(j) + " ");
             }
         }
+
+        Set<String> st = new HashSet<String>();
+        st.add("first");
+        st.add("second");
+        st.add("third");
+        st.add("fourth");
+        st.add(null);
+        st.add(null);
+
+        Iterator<String> it = st.iterator();
+
+        while(it.hasNext()) {
+            System.out.println(it.next());
+        }
 //
 
 //        Map<String, Integer> mp = new HashMap<String, Integer>();
@@ -68,6 +85,10 @@ public class Main {
 //
 
         System.out.println(Main.checkSum(new int[]{3, 1, 7, 11}, 12));
+
+        System.out.println(5 + "this");
+
+        System.out.println(Integer.valueOf('c'));
 
     }
 
