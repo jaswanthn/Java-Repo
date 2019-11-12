@@ -18,6 +18,15 @@ public class Student {
         this.studentAge = studentAge;
     }
 
+    public Student(long studentId, String studentName) {
+        this.studentId = studentId;
+        this.studentName = studentName;
+        this.studentEmail = studentEmail;
+        this.studentContactNo = studentContactNo;
+        this.studentHeight = studentHeight;
+        this.studentAge = studentAge;
+    }
+
     // default constructor
     public Student() {
         this.studentId = 0;

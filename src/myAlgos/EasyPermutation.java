@@ -1,14 +1,14 @@
 package myAlgos;
 
-import java.util.ArrayList;
 import java.util.*;
 
 public class EasyPermutation {
 
+    // using simple recursion and constructing prefix in each call
     public static void permutation(String prefix, String str) {
         int n = str.length();
 
-        if (str.length()<=0) {
+        if (n<=0) {
             System.out.println(prefix);
             return;
         }
@@ -18,59 +18,36 @@ public class EasyPermutation {
         }
     }
 
-    public static List<String> otherPermutation(String str){
-        List<String> result = new ArrayList<>();
-        boolean[] used = new boolean[str.length()];
-
-        premRec(str, "", used, result);
-
+    // using backtracking technique on array of integers
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        permuteHelper(result, new ArrayList<Integer>(), nums);
         return result;
     }
 
-    private static void premRec(String str,String current, boolean[] used, List<String> result){
-        if(current.length() == str.length()){
-            result.add(current);
-            System.out.println(current);
+    private void permuteHelper (List<List<Integer>> result, ArrayList<Integer> tempList, int[] nums) {
+        // base case
+        System.out.println(tempList);
+        if (tempList.size() == nums.length) {
+
+            result.add(new ArrayList<>(tempList));
             return;
         }
 
-        for(int i=0; i <  str.length(); i++){
-            if(used[i]) continue;
-            used[i] = true;
-            premRec(str, current + str.charAt(i), used, result);
-            used[i] = false;
+
+        for (int i=0; i < nums.length; i++) {
+            if (tempList.contains(nums[i])) continue;
+            // choose
+            tempList.add(nums[i]);
+            // explore
+            permuteHelper(result, tempList, nums);
+            // unchoose
+            tempList.remove(tempList.size()-1);
         }
     }
+
+
     public static void main(String[] args) {
-
-
-        //permutation("", "ABC");
-        otherPermutation("ABCD");
-    }
-
-    List<Integer> lengthEachScene(List<Character> inputList){
-
-        List<Integer> result = new ArrayList<Integer>();
-
-        int lastIndex = 0;
-
-        HashSet<Character> tempPar  = new HashSet<Character>();
-
-        for(int i = 0; i < inputList.size(); i++){
-
-            for(int j = i; j < inputList.size(); j++){
-                if(tempPar.contains(inputList.get(j))){
-                    lastIndex = j;
-                }
-                else{
-                    tempPar.add(inputList.get(j));
-                }
-            }
-            result.add(lastIndex + 1);
-            i = lastIndex;
-            tempPar.clear();
-        }
-
-        return result;
+        permutation("", "ABCD");
     }
 }

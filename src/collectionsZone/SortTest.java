@@ -13,6 +13,8 @@ public class SortTest {
         li.add(15);
         li.add(9);
 
+        li.get(1);
+
         li.sort(new Comparator<Integer>(){public int compare(Integer a,Integer b) {
              return (a < b) ? -1 : 1;
         }});

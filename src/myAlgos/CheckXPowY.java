@@ -21,7 +21,7 @@ public class CheckXPowY {
     }
 
     public static void main(String[] args) {
-        System.out.println(checkIfXPowY(16));
+        System.out.println(checkIfXPowY(17));
     }
 
 }

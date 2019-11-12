@@ -1,10 +1,10 @@
 package myAlgos;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.*;
 
 // CLASS BEGINS, THIS CLASS IS REQUIRED
 class Interval {
@@ -87,4 +87,3 @@ public class Solution {
         return result;
     }
 }
-// METHOD SIGNATURE ENDS

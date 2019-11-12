@@ -4,7 +4,7 @@ public class ShapeDemo {
 
     public static void main(String[] args) {
         // calculate area and perimeter of Rectangle, display using inheritance
-        Rectangle rc = new Rectangle(6, 5);
+        Shape rc = new Rectangle(6, 5);
         rc.area();
         rc.perimeter();
 

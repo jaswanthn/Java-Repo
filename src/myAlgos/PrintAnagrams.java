@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class PrintAnagrams {
 
     public static void main(String[] args) {
-        //showAnagrams("ABC", 0, 3);
+        showAnagrams("ABC", 0, 2);
 
 //        char[] charArr = {'a', 'b', 'c'};
 //        System.out.println(charArr.toString());
@@ -23,7 +23,7 @@ public class PrintAnagrams {
         }
 
         else {
-            for (int i = l; i < r; i++) {
+            for (int i = l; i <= r; i++) {
                 str = swap(str, l, i);
                 showAnagrams(str, l+1, r);
                 //str = swap(str, l, i);

@@ -2,10 +2,10 @@ package constructors;
 
 public class Account {
 
-    long accountId;
-    String accountHolderName;
-    int routingNumber;
-    String emailId;
+    public long accountId;
+    public String accountHolderName;
+    public int routingNumber;
+    public String emailId;
 
     // default constructor
     public Account() {
