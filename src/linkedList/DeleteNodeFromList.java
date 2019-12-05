@@ -24,12 +24,11 @@ public class DeleteNodeFromList {
             head = null;
         }
 
+        // delete node is head, hence change the head pointer to next
         if (head.val == val && head.next != null) {
             // make head as next element
             head = head.next;
-        }
-
-        else {
+        } else { // delete node is other than head
             Node prev = head;
             Node curr = head.next;
             while(curr!=null) {
