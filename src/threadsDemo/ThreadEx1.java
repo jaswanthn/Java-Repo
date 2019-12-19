@@ -22,6 +22,7 @@ public class ThreadEx1 extends Thread
 
         BasicOperations bo = new BasicOperations();
 
+
         bo.display("sum of two numbers performed by " + threadName + ": " + bo.add(a, b));
         bo.display("diff of two numbers performed by " + threadName + ": " + bo.sub(a, b));
         bo.display("mul of two numbers performed by " + threadName + ": " + bo.mul(a, b));
