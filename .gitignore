@@ -1,4 +1,4 @@
-*.tsv
 *.class
-../out/
-
+*.tsv
+/out/
+/.idea/
