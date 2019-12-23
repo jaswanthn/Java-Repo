@@ -10,7 +10,7 @@ public class MaxHeap {
     public static void main(String[] args) {
         MaxHeap mh = new MaxHeap();
         mh.print();
-        int[] heapArray = { 1, 4, 21, 7, 12, 15, 14, 9, 2, 3, 16 };
+        int[] heapArray = { 4, 7, 12, 15, 14, 9, 2, 3, 16 };
 
         System.out.println("Before heapify: "+Arrays.toString(heapArray));
         new MaxHeap().buildMaxHeap(heapArray, heapArray.length);
