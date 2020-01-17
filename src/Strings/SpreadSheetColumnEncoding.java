@@ -6,6 +6,8 @@ public class SpreadSheetColumnEncoding {
 
         SpreadSheetColumnEncoding sscEncoding = new SpreadSheetColumnEncoding();
         System.out.println(sscEncoding.decodeColumnString("AAA"));
+        String str = "hello";
+        System.out.println(str.hashCode() % 10);
     }
 
     public static int decodeColumnString(String columnString) {
