@@ -11,8 +11,7 @@ public class RemoveDuplicates {
 
         for (char c : str.toCharArray()) {
             if (lhs.contains(c)) {
-                lhs.remove(c);
-                lhs.add(c);
+                continue;
             } else {
                 lhs.add(c);
             }

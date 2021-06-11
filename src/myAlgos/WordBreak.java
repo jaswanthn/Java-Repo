@@ -13,8 +13,8 @@ public class WordBreak {
         hs.add("a");
         hs.add("test");
 
-        //System.out.println(checkWordBreakInString("thisisatest"));
-        System.out.println(checkWordsUsingReplace("thisisatest"));
+        System.out.println(checkWordBreakInString("this"));
+        //System.out.println(checkWordsUsingReplace("thisisatest"));
 
     }
 
@@ -48,7 +48,7 @@ public class WordBreak {
             }
         }
 
-        return false;
+        return wordMatch[n-1];
 
     }
 

@@ -14,25 +14,15 @@ public class KMostFrequentElements {
         // find frequency of each element and store it in hash map
         HashMap<Integer, Integer> hm = new HashMap<>();
         for (int i=0; i < A.length; i++) {
-            if (hm.containsKey(A[i])) {
-                hm.put(A[i], hm.get(A[i]) + 1);
-            } else {
-                hm.put(A[i], 1);
-            }
+            hm.put(A[i], hm.getOrDefault(A[i], 0) + 1);
         }
-
 
         // store them in treeMap with frequency as key and ArrayList as value
         TreeMap<Integer, ArrayList<Integer>> bucketMap = new TreeMap<>();
         for (int number : hm.keySet()) {
-            if (bucketMap.containsKey(hm.get(number))) {
-                // add that value to list
-                bucketMap.get(hm.get(number)).add(number);
-            } else {
-                ArrayList<Integer> al = new ArrayList<>();
-                al.add(number);
-                bucketMap.put(hm.get(number), al);
-            }
+            ArrayList al = bucketMap.getOrDefault(hm.get(number), new ArrayList<>());
+            al.add(number);
+            bucketMap.put(hm.get(number), al);
         }
 
 

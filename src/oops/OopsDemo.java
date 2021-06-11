@@ -6,6 +6,7 @@ import java.util.List;
 public class OopsDemo {
 
     public Student[] st;
+    public int studentCount;
 
     public void addStudent() {
         st = new Student[2];
@@ -13,7 +14,7 @@ public class OopsDemo {
                 9123312330l, 5.5, 15);
         st[1] = new Student(1235, "Kumar", "ku@gmail.com",
                 9123382330l, 3.5, 13);
-
+        studentCount += 1;
     }
 
     public void printStudent() {
@@ -54,6 +55,8 @@ public class OopsDemo {
 
         OopsDemo od = new OopsDemo();
         od.addStudent();
+        System.out.println(od.studentCount);
+
         od.printStudent();
     }
 }

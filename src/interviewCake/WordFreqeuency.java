@@ -18,7 +18,7 @@ public class WordFreqeuency {
         int currentWordStartIndex = 0;
         int currentWordLength = 0;
 
-        for (int i =0; i < phrase.length(); i++) {
+        for (int i = 0; i < phrase.length(); i++) {
 
             // check if current character is a letter
             if (Character.isLetter(phrase.charAt(i))) {

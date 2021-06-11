@@ -42,6 +42,7 @@ public class NQueenSolution {
         for (int i = 0; i < N; i++) {
             // each row check whether it is safe to place the queen
             if (isSafeToPlaceUtil(board, i, col)) {
+                // place the queen and recursively call
                 board[i][col] = 1;
                 // progress to next level through recursion
                 if (solveNQUtil(board, col + 1)) {

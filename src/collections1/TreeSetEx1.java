@@ -15,8 +15,6 @@ public class TreeSetEx1 {
 
     }
 
-
-
 }
 
 class MyComparator implements Comparator {
